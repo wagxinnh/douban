@@ -31,19 +31,19 @@
             <span>看过</span>      
         </div>
         <div class="intrcon">
-             <p class="tits">无问西东的简介</p>
-            <p></p>
+             <p class="tits">大话西游的简介</p>
+            <p>故事开始是观音菩萨要除掉孙悟空(周星驰饰)，因其伙同牛魔王欲杀害师父唐三藏（罗家英饰），并偷走了月光宝盒。唐三藏慈悲为怀，愿自杀以换悟空重生。</p>
             <p class="tits">查看更多相关分类</p>
             <div class="mvtype">
                 <span>剧情</span>
                 <span>爱情</span>      
                 <span>战争</span>      
             </div>
-            <p class="tits">无问西东的图片</p>
+            <p class="tits">大话西游的图片</p>
             <div class="imgcon">
                 <sliderimg v-for="(v,i) in news.images" :imgs="news.images.large" :key="i"></sliderimg>
             </div>
-            <p class="tits">无问西东的短评</p> 
+            <p class="tits">大话西游的短评</p> 
         </div>
         <shoutrevw></shoutrevw>
         <shoutrevw></shoutrevw>
@@ -52,7 +52,7 @@
         <titles :tit="text1"></titles>
         <div class="ads">
             <img src="../../static/img/n2.png" alt="">
-            <p class="tits">无问西东的问答</p>
+            <p class="tits">大话西游的问答</p>
         </div>
         <titles :tit="text2"></titles>
         <morelist :movetit="arr[0].tit" :moremv="arr[0].mores"></morelist>
@@ -191,7 +191,7 @@ export default {
 }
 .pingfen span{
     font-size:.14rem;
-    margin-left:.2rem;
+    margin-left:.1rem;
 }
 .mvnews>div p:nth-of-type(1){
     width:100%;
@@ -253,8 +253,8 @@ export default {
 </style>
 <style>
 .el-rate__icon{
-font-size:.15rem;
-margin-right: 0;
-margin-left:0;
+font-size:.15rem; 
+margin-right: 0 !important;
+margin-left:0 !important;
 } 
 </style>

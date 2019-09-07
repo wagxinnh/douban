@@ -64,8 +64,8 @@ p {
 }
 </style>
 <style>
-.el-rate__icon{
-margin-right: 0;
+.el-rate__icon {
+  margin-right: 0 !important;
 } 
 .el-rate__icon:nth-of-type(1){
   margin-left:0.03rem;

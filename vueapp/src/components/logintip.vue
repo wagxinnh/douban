@@ -17,22 +17,22 @@ export default {
            tips:"请您登陆"
         }
     },
-     created() {
-    // 1.把本地存储中的token取出来
-    var localtoken = window.localStorage.getItem("token");
-    // 2.发送给后端
-    if (localtoken) {
-      this.axios({
-        url: "http://localhost:3000/index",
-        method: "get",
-        params: { token: localtoken }
-      }).then(ok => {
-        if (ok.data.linkid == 8) {
-          this.tips = "欢迎您" + ok.data.uemail;
-        } 
-      });
-  }
-}
+//      created() {
+//     // 1.把本地存储中的token取出来
+//     var localtoken = window.localStorage.getItem("token");
+//     // 2.发送给后端
+//     if (localtoken) {
+//       this.axios({
+//         url: "http://localhost:3000/index",
+//         method: "get",
+//         params: { token: localtoken }
+//       }).then(ok => {
+//         if (ok.data.linkid == 8) {
+//           this.tips = "欢迎您" + ok.data.uemail;
+//         } 
+//       });
+//   }
+// }
 }
 </script>
 <style scoped>

@@ -8,7 +8,7 @@ import axios from 'axios'
 Vue.prototype.axios = axios
 // 引用mock
 require("./mock");
-// 引用mui
+// // 引用mui
   import mui from '../static/mui/js/mui.js'
   import '../static/mui/css/mui.css'
 Vue.prototype.mui = mui
