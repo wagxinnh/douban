@@ -32,26 +32,26 @@ export default {
 	},
 	methods:{
 		fun(){
-			this.axios({
-				url:"http://localhost:3000/reg",
-				method:"get",
-				params:{uemail:this.email,upwd:this.pwd,uname:this.name}
-				}).then((ok)=>{
-					if(ok.data.linkid==1){
-					    this.tips="亲，该用户名已存在";
-					}else if(ok.data.linkid==2){
-						var i=5;
-						setInterval(()=>{
-							i--;
-							if(i==0){
-                                this.$router.push("/login");  
-							}
-							this.tips="注册成功"+i+"秒后跳转至登陆页";
-						},1000)
-					}else if(ok.data.linkid==3){
-						this.tips="网络超时请重新连接";
-					}
-				})
+		// 	this.axios({
+		// 		url:"http://localhost:3000/reg",
+		// 		method:"get",
+		// 		params:{uemail:this.email,upwd:this.pwd,uname:this.name}
+		// 		}).then((ok)=>{
+		// 			if(ok.data.linkid==1){
+		// 			    this.tips="亲，该用户名已存在";
+		// 			}else if(ok.data.linkid==2){
+		// 				var i=5;
+		// 				setInterval(()=>{
+		// 					i--;
+		// 					if(i==0){
+        //                         this.$router.push("/login");  
+		// 					}
+		// 					this.tips="注册成功"+i+"秒后跳转至登陆页";
+		// 				},1000)
+		// 			}else if(ok.data.linkid==3){
+		// 				this.tips="网络超时请重新连接";
+		// 			}
+		// 		})
 			}
 		}
 }   

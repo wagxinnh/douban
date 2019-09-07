@@ -34,39 +34,40 @@ export default {
   },
   methods: {
     fun() {
-      let params=new URLSearchParams();
-      params.append("uemail",this.email);
-      params.append("upwd",this.pwd);
-      this.axios({
-        url: "http://localhost:3000/login",
-        method: "post",
-        data:params
-      }).then(ok => {
-        if (ok.data.linkid == 4) {
-          window.localStorage.setItem("token", ok.data.token);
-          var i = 5;
-          setInterval(()=> {
-            i--;
-            if (i == 0) {
-              this.$router.push("/home"); 
-            }
-            this.tips = "登录成功" + i + "秒后跳转至主页";
-          }, 1000);
-        } else if (ok.data.linkid == 5) {
-          this.tips = "用户名与密码不符请重新登录";
-        } else if (ok.data.linkid == 6) {
-          this.tips = "网络超时请重新登录";
-        }
-      });
-    },
-    reg(){
-      this.$router.push("/reg");
-    },
-    remove(){
-      window.localStorage.removeItem("token");
-    }
+    //   let params=new URLSearchParams();
+    //   params.append("uemail",this.email);
+    //   params.append("upwd",this.pwd);
+    //   this.axios({
+    //     url: "http://localhost:3000/login",
+    //     method: "post",
+    //     data:params
+    //   }).then(ok => {
+    //     if (ok.data.linkid == 4) {
+    //       window.localStorage.setItem("token", ok.data.token);
+    //       var i = 5;
+    //       setInterval(()=> {
+    //         i--;
+    //         if (i == 0) {
+    //           this.$router.push("/home"); 
+    //         }
+    //         this.tips = "登录成功" + i + "秒后跳转至主页";
+    //       }, 1000);
+    //     } else if (ok.data.linkid == 5) {
+    //       this.tips = "用户名与密码不符请重新登录";
+    //     } else if (ok.data.linkid == 6) {
+    //       this.tips = "网络超时请重新登录";
+    //     }
+    //   });
+    // },
+    // reg(){
+    //   this.$router.push("/reg");
+    // },
+    // remove(){
+    //   window.localStorage.removeItem("token");
+    // }
   }
-};
+}
+}
 </script>
 <style scoped>
 .title {
